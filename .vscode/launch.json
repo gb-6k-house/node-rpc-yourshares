@@ -1,0 +1,52 @@
+{
+    // 使用 IntelliSense 以学习相关的 Node.js 调试属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Http",
+            "program": "${workspaceRoot}/EMHttpService/bin/HttpStartBoot"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug fileservice",
+            "program": "${workspaceRoot}/EMFileService/bin/startBoot"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug userRpc",
+            "sourceMaps": true,
+            "restart": true,
+            //Skipping uninteresting code
+            "skipFiles": [
+                "${workspaceRoot}/EMRpcService/node_modules/**/*.js"
+            ],
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/EMRpcService/src/bin/userRpcStartup.ts",
+            "outFiles": [
+                "${workspaceRoot}/EMRpcService/dist/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug educationRpc",
+            "sourceMaps": true,
+            "restart": true,
+            //Skipping uninteresting code
+            "skipFiles": [
+                "${workspaceRoot}/EMRpcService/node_modules/**/*.js"
+            ],
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/EMRpcService/src/bin/educationRpcStartup.ts",
+            "outFiles": [
+                "${workspaceRoot}/EMRpcService/dist/**/*.js"
+            ]
+        }
+    ]
+}

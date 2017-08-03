@@ -1,0 +1,29 @@
+{
+  "name": "node-rpc-yourshares",
+  "version": "0.1.0",
+  "description": "",
+  "types": "./lib/*.d.ts",
+  "scripts": {},
+  "author": "liukai",
+  "license": "ISC",
+  "keywords": [
+    "rpc",
+    "typescript",
+    "yourshares",
+    "SDK",
+    "Core"
+  ],
+  "dependencies": {
+    "hprose": "~2.0.42"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-shell": "^0.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gb-6k-house/node-rpc-yourshares.git"
+  },
+  "homepage": "git+https://github.com/gb-6k-house/gb-6k-house.github.io"
+}
